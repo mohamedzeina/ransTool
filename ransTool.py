@@ -16,6 +16,22 @@ from urllib.parse import urlparse
 stopWords = stopwords.words('english')
 
 
+def isBitCoinAddress(address):
+    result = True 
+    
+    if(len(address) > 35 or len(address) < 26):
+        result = False
+    elif(address[0] != '1' and address[0] != '3' and address[:3] != 'bc1'):
+        result = False
+    else:
+        for char in address:
+            if(not char.isalpha() and not char.isnumeric()):
+                result = False
+            elif(char == 'O' or char == 'I' or char == 'l' or char == '0'):
+                result = False
+
+    return result
+
 
 symbols = ['~', ':', "'", '+', '[', '\\', '@', 
            '^', '{', '%', '(', '-', '"', '*', '|', ',', '&', 
@@ -34,13 +50,20 @@ def unique(sequence):
 filtered_vocab = []
 
 
+
 def extractFeatures(fileData):
     
     try:
- 
+        lines = []
+        
+        for line in fileData.splitlines():
+            lines.append(line)
+        
+       
         fileDataNoPunc = fileData.translate(str.maketrans('', '', string.punctuation))
         fileDataNoPunc = fileDataNoPunc.lower()
-    
+        
+
         
         tokens = fileDataNoPunc.split()
         
@@ -88,22 +111,29 @@ def extractFeatures(fileData):
             
         extractedURLS = list(dict.fromkeys(extractedURLS))
         
-        return emails, top20Words, extractedURLS
+        return emails, top20Words, extractedURLS, lines
         
         
     except:
         print("An exception occurred")
         
+        return None, None, None
         
         
-def getRansType(email, topWords, dropType, links):
+        
+def getRansType(email, topWords, dropType, links, lines):
     
     ransType = ""
+
 
     
     if(not email and not links and dropType == "Text Only"):
         if('alcatraz' in topWords):
             ransType = 'Alcatraz'
+        elif(len(lines) >= 2 and 'send' in lines[0].lower() and 'bitcoins' in lines[0].lower() and isBitCoinAddress(lines[1])):
+            ransType = 'ZeroFucks'
+        elif(len(lines) >= 17 and 'send' in lines[15].lower() and 'bitcoin' in lines[15].lower()  and isBitCoinAddress(lines[16])):
+            ransType = 'Jigsaw'
         else:
             ransType = 'UNKNOWN'
       
@@ -124,6 +154,8 @@ def getRansType(email, topWords, dropType, links):
              'http://uk74sqtx2ynr2nzb.onion.nu' in links or'http://uk74sqtx2ynr2nzb.onion.cab' in links or 
              'http://uk74sqtx2ynr2nzb.onion.to' in links):
             ransType = 'BartRansom'
+        elif(len(lines) >= 33 and 'send' in lines[31].lower()  and ('btc' in lines[31].lower() or 'bitcoin' in lines[31].lower()) and isBitCoinAddress(lines[32])):
+             ransType = 'Malboro'
         else:
             ransType = 'UNKNOWN'
             
@@ -211,6 +243,10 @@ def getRansType(email, topWords, dropType, links):
             ransType = 'DragonCyber'
         elif('pewdiepie' in topWords):
              ransType = 'PewCrypt'
+        elif('wanadecryptor' in topWords):
+            ransType = 'Wannacry'
+        elif(len(lines) >= 18 and 'send' in lines[16].lower() and 'btc' in lines[16].lower() and isBitCoinAddress(lines[17])):
+            ransType = 'NoobCrypt'
         else:
             ransType = 'UNKNOWN'    
         
@@ -263,9 +299,7 @@ def getRansType(email, topWords, dropType, links):
         else:
             ransType = 'UNKNOWN'
         
-        
 
-        
         
     return ransType
     
@@ -300,14 +334,13 @@ while True:
         pymsgbox.alert('Choose a drop type!!!', 'Error')
         continue
 
-    email, topWords, urls = extractFeatures(values['textbox'])
+    email, topWords, urls, lines= extractFeatures(values['textbox'])
+        
+  
+    #ransType = getRansType(email, topWords, values['dropType'], urls, lines)
+    #window['Output'].update(value=ransType)
     
-    #print(topWords)
-    #print(email)
-    #print(urls)
-
-    ransType = getRansType(email, topWords, values['dropType'], urls)
-    window['Output'].update(value=ransType)
+    
         
 
 window.close()
