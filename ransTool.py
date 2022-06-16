@@ -134,6 +134,8 @@ def getRansType(email, topWords, dropType, links, lines):
             ransType = 'ZeroFucks'
         elif(len(lines) >= 17 and 'send' in lines[15].lower() and 'bitcoin' in lines[15].lower()  and isBitCoinAddress(lines[16])):
             ransType = 'Jigsaw'
+        elif('itunes' in topWords and  len(lines) == 13 and 'greetings' in lines[0].lower() and 'sorry' in lines[12].lower()):
+            ransType = 'Alpha'
         else:
             ransType = 'UNKNOWN'
       
@@ -247,6 +249,8 @@ def getRansType(email, topWords, dropType, links, lines):
             ransType = 'Wannacry'
         elif(len(lines) >= 18 and 'send' in lines[16].lower() and 'btc' in lines[16].lower() and isBitCoinAddress(lines[17])):
             ransType = 'NoobCrypt'
+        elif('code' in topWords and 'sms' in topWords and 'Attention!' in lines[0]):
+            ransType = 'Xorist'
         else:
             ransType = 'UNKNOWN'    
         
@@ -289,7 +293,7 @@ def getRansType(email, topWords, dropType, links, lines):
         
     else:
         if('tits' in topWords and 'sashagrey@blurred.credit' in email):
-            ransType = "Iwanttits"
+            ransType = 'Iwanttits'
         elif('filelocker@protonmail.ch' in email):
             ransType = 'Chernolcoker'
         elif('bitpandacom@qq.com' in email):
@@ -335,10 +339,11 @@ while True:
         continue
 
     email, topWords, urls, lines= extractFeatures(values['textbox'])
+ 
         
   
-    #ransType = getRansType(email, topWords, values['dropType'], urls, lines)
-    #window['Output'].update(value=ransType)
+    ransType = getRansType(email, topWords, values['dropType'], urls, lines)
+    window['Output'].update(value=ransType)
     
     
         

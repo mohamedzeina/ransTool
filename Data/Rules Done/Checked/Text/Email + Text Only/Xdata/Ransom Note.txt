@@ -1,0 +1,25 @@
+Your IMPORTANT FILES WERE ENCRYPTED on this computer: documents, databases, photos, videos, etc.
+
+Encryption was prodused using unique public key for this computer.
+To decrypt files, you need to obtain private key and special tool.
+
+To retrieve the private key and tool find your pc key file with '.key.~xdata~' extension.
+Depending on your operation system version and personal settings, you can find it in:
+'C:/',
+'C:/ProgramData',
+'C:/Documents and Settings/All Users/Application Data',
+'Your Desktop'
+folders (eg. 'C:/PC-TTT54M#45CD.key.~xdata~'). 
+
+Then send it to one of following email addresses:
+
+begins@colocasia.org
+bilbo@colocasia.org
+frodo@colocasia.org
+trevor@thwonderfulday.com
+bob@thwonderfulday.com
+bil@thwonderfulday.com
+
+Your ID: MSEDGEWIN10#110358A5DB6C5DEFF7F1CD99D331895D
+
+Do not worry if you did not find key file, anyway contact for support.

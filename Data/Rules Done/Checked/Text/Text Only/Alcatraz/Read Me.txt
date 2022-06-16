@@ -1,0 +1,15 @@
+ALL YOUR DATA ARE ENCRYPTED.
+Help | Aiuto | Au secours | Ayuda | Hilfe
+Pay XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX BTC at BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB
+Your ID:yrhIiVbHzJyxVGhS
+Q&A
+Q: What's happens?
+A : You have been infected by a Alcatraz Locker
+Q : What I have to do now ?
+A : The only method to get back your document is to pay.
+Q : There is a method to decrypt without pay ?
+A : No.there isn't, all your data are encrypted with AES-256 with a 128-bit password. NSA use the same algorithm to encrypt top-secret documents
+Q : If I don't want pay?
+A : You have to choose if pay or lose your data for ever.
+Q : How to Pay ?
+A : The only method accepted is Bitcoin follow this link to start pay.

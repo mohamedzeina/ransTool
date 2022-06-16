@@ -1,8 +1,0 @@
-Attention! All your files are encrypted!
-To restore your files and access them,
-please send an SMS with the text XXXX to YYYY number.
-
-You have N attempts to enter the code.
-When that number has been exceeded,
-all the data irreversibly is destroyed.
-Be careful when you enter the code!

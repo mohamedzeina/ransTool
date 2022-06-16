@@ -1,0 +1,49 @@
+===============================# aes-ni ransomware #===============================
+
+                   █████╗ ███████╗███████╗      ███╗   ██╗██╗
+                  ██╔══██╗██╔════╝██╔════╝      ████╗  ██║██║
+                  ███████║█████╗  ███████╗█████╗██╔██╗ ██║██║
+                  ██╔══██║██╔══╝  ╚════██║╚════╝██║╚██╗██║██║
+                  ██║  ██║███████╗███████║      ██║ ╚████║██║
+                  ╚═╝  ╚═╝╚══════╝╚══════╝      ╚═╝  ╚═══╝╚═╝
+
+SPECIAL VERSION: NSA EXPLOIT EDITION
+
+INTRO: If you are reading it, your server was attacked with NSA exploits.
+Make World Safe Again.
+
+SORRY! Your files are encrypted.
+File contents are encrypted with random key (AES-256 bit; ECB mode).
+Random key is encrypted with RSA public key (2048 bit).
+
+We STRONGLY RECOMMEND you NOT to use any "decryption tools".
+These tools can damage your data, making recover IMPOSSIBLE.
+
+Also we recommend you not to contact data recovery companies.
+They will just contact us, buy the key and sell it to you at a higher price.
+
+If you want to decrypt your files, you have to get RSA private key.
+In order to get private key, write here:
+
+0xc030@protonmail.ch
+0xc030@tuta.io
+aes-ni@scryptmail.com
+
+IMPORTANT: In some cases malware researchers can block our e-mails.
+If you did not receive any answer on e-mail in 48 hours,
+ please do not panic and write to BitMsg (https://bitmsg.me) address:
+ BM-2cVgoJS8HPMkjzgDMVNAGg5TG3bb1TcfhN
+ or create topic on https://www.bleepingcomputer.com/ and we will find you there.
+
+If someone else offers you files restoring, ask him for test decryption.
+ Only we can successfully decrypt your files; knowing this can protect you from fraud.
+
+You will receive instructions of what to do next.
+You MUST refer this ID in your message:
+
+MSEDGEWIN10#110358A5DB6C5DEFF7F1CD99D331895D
+
+Also you MUST send all ".key.aes_ni_0day" files from C:\ProgramData if there are any.
+
+
+===============================# aes-ni ransomware #===============================

