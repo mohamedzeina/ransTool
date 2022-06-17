@@ -16,7 +16,7 @@ from urllib.parse import urlparse
 stopWords = stopwords.words('english')
 
 
-def isBitCoinAddress(address):
+def isBitCoinAddress(address): # This function checks whether a bitcoin address is valid or not
     result = True 
     
     if(len(address) > 35 or len(address) < 26):
@@ -51,7 +51,7 @@ filtered_vocab = []
 
 
 
-def extractFeatures(fileData):
+def extractFeatures(fileData):  # This function extracts the urls, emails, lines and top 50 most frequent words from an input text
     
     try:
         lines = []
@@ -60,7 +60,7 @@ def extractFeatures(fileData):
             lines.append(line)
         
        
-        fileDataNoPunc = fileData.translate(str.maketrans('', '', string.punctuation))
+        fileDataNoPunc = fileData.translate(str.maketrans('', '', string.punctuation)) # remove punctuation marks 
         fileDataNoPunc = fileDataNoPunc.lower()
         
 
@@ -69,14 +69,14 @@ def extractFeatures(fileData):
         
         vocab = unique(tokens)
         
-        for w in vocab: 
+        for w in vocab: # remove the stop words 
             if w not in stopWords and w not in symbols: 
                 filtered_vocab.append(w)
                         
         vector1 = vectorize(tokens)
         
         CountVec = CountVectorizer(ngram_range=(1,1),
-                                   stop_words='english')
+                                   stop_words='english') # count the number of times each word occurs in the input text
         
         Count_data = CountVec.fit_transform([fileData])
         
@@ -84,11 +84,11 @@ def extractFeatures(fileData):
         pd.set_option('display.width', 120)
         
         
-        top20Words = cv_dataframe.iloc[0].nlargest(50).index
+        top50Words = cv_dataframe.iloc[0].nlargest(50).index # get the top 50 most frequent words 
         
-        emails = list(dict.fromkeys(re.findall(r"[a-z0-9\.\-+_]+@[a-z0-9\.\-+_]+\.[a-z]+", fileData.lower())))
+        emails = list(dict.fromkeys(re.findall(r"[a-z0-9\.\-+_]+@[a-z0-9\.\-+_]+\.[a-z]+", fileData.lower()))) # extract all of the emails from the input text
         
-        urls = list(dict.fromkeys(re.findall("(?P<url>https?://[^\s]+)", fileData.lower())))
+        urls = list(dict.fromkeys(re.findall("(?P<url>https?://[^\s]+)", fileData.lower()))) # extract all of the urls from the input text
         
         extractedURLS = []
      
@@ -111,17 +111,17 @@ def extractFeatures(fileData):
             
         extractedURLS = list(dict.fromkeys(extractedURLS))
         
-        return emails, top20Words, extractedURLS, lines
+        return emails, top50Words, extractedURLS, lines
         
         
     except:
         print("An exception occurred")
         
-        return None, None, None
+        return None, None, None, None
         
         
         
-def getRansType(email, topWords, dropType, links, lines):
+def getRansType(email, topWords, dropType, links, lines): # function that returns the ransomware type from the rules defined 
     
     ransType = ""
 
